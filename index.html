@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>随机数猜测</title>
+<style>
+          *{
+                    text-align: center;
+                    font-family: fangsong;
+          }
+          button{
+                    font-size: 30px;
+                    background-color: pink;
+                    border-radius: 7px;
+                    border: 1px solid red;
+          }
+          #id{
+                    font-style:oblique;
+                    
+          }
+          img{
+                    border-radius: 10px;
+                    border: 2px solid black;
+          }
+          body{
+                    background-color: wheat;
+          }
+</style>
+</head>
+<body>
+<h1>猜数字：数字范围: 1-100</h1>
+<button onclick="guess()">点我！让坤坤帮你生成随机数</button>
+<h2><p id="result"></p ></h2>
+<img src="./640.jpeg" alt="基尼太美">
+
+<script>
+function guess() {
+
+const min = 1;
+const max = 100;
+const randomNumber = Math.floor(Math.random() * (300 - 1 + 1)) + 1;
+// const input = parseInt(prompt(`请输入${min}-${max}之间的数字`, ''));
+
+if (randomNumber >= min && randomNumber <= max) { // 判断输入是否在范围内
+document.getElementById('result').innerText = `你动了动金手指，搞出一个随机数字:${randomNumber},\n猜中啦!\n这件事情真的是，泰裤辣! 走, 恰gei去`;
+} else {
+document.getElementById('result').innerText = `你动了动金手指，搞出一个随机数字:${randomNumber},\n没猜中!\n我希望你能好好跟我合作，再猜一次，这个答案是不会亏待你的`;
+}
+}
+</script>
+</body>
+</html>
